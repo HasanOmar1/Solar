@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        background: black;
+      }
+      ._n {
+        display: grid;
+        grid-template-areas:
+          "header_n header_n header_n header_n"
+          "header_n header_n header_n header_n"
+          "sidebar content_n content_n sidebar2"
+          "footer_n footer_n footer_n footer_n";
+        height: 900px;
+        grid-gap: 0.2rem;
+      }
+
+      /* Smartphones */
+      @media only screen and (max-width: 500px) {
+        body {
+          /* background: rgba(255, 0, 0, 0.603); */
+        }
+        .container_n {
+          display: grid;
+          grid-template-areas:
+            "header_n"
+            "header_n"
+            "sidebar"
+            "content_n"
+            "content_n"
+            "sidebar2"
+            "footer_n";
+          height: 100vh;
+        }
+      }
+
+      /* Tablet */
+      @media (min-width: 501px) and (max-width: 768px) {
+        body {
+          /* background: rgba(0, 225, 255, 0.603); */
+        }
+
+        .container_n {
+          display: grid;
+          grid-template-areas:
+            "header_n header_n header_n header_n"
+            "header_n header_n header_n header_n"
+            "sidebar content_n content_n content_n"
+            "sidebar content_n content_n content_n"
+            "sidebar2 sidebar2 sidebar2 sidebar2"
+            "footer_n footer_n footer_n footer_n ";
+          height: 100vh;
+          grid-gap: 0.2rem;
+        }
+      }
+
+      /* Normal */
+      @media (min-width: 769px) {
+        body {
+          /* background: green; */
+        }
+        .container_n {
+          display: grid;
+          grid-template-areas:
+            "header_n header_n header_n header_n"
+            "header_n header_n header_n header_n"
+            "sidebar content_n content_n sidebar2"
+            "sidebar content_n content_n sidebar2"
+            "footer_n footer_n footer_n footer_n";
+          height: 200vh;
+          grid-gap: 0.2rem;
+        }
+      }
+
+      #sidebar {
+        background: rgb(47, 0, 255);
+
+        grid-area: sidebar;
+      }
+
+      #content_n {
+        background: rgb(69, 155, 12);
+        opacity: 0.9;
+        position: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        grid-area: content_n;
+      }
+
+      #sidebar2 {
+        background: rgb(195, 0, 255);
+
+        grid-area: sidebar2;
+      }
+
+      #footer_n {
+        background: rgb(238, 255, 0);
+
+        grid-area: footer_n;
+      }
+
+      #header_n {
+        display: flex;
+        flex-direction: column;
+        background-image: url(./Nick_assetes/nick_cover.jpg);
+        opacity: 0.6;
+        text-align: center;
+        vertical-align: top;
+        /* margin: 0 auto; */
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 5%;
+        grid-area: header_n;
+        height: 100%;
+      }
+
+      .header_n > h1 {
+        margin-top: 200px;
+        font-size: 10rem;
+      }
+
+      .description {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-end;
+        justify-content: center;
+        align-items: first;
+
+        font-size: 1.5rem;
+      }
+
+      /* Center and scale the image nicely */
+    </style>
+    <title>grid</title>
+  </head>
+  <body>
+    <div class="container_n">
+      <div class="header_n" id="header_n"><h1>The Solar System</h1></div>
+      <div class="header_n" id="content_n">
+        <h1 class="main_title"></h1>
+        <div class="description">
+          <p>
+            Our solar system consists of our star, the Sun, and everything bound
+            to it by gravity –
+          </p>
+          <p>
+            the planets Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus,
+            and Neptune; dwarf planets such as Pluto; dozens of moons; and
+            millions of asteroids, comets, and meteoroids.
+          </p>
+        </div>
+      </div>
+
+      <div class="sidebar" id="sidebar">sidebar</div>
+      <div class="content_n" id="sidebar2">sidebar2</div>
+      <div class="footer_n" id="footer_n">footer</div>
+    </div>
+  </body>
+</html>
