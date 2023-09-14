@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rotate_planet</title>
+</head>
+<style>
+:root{
+    --planet-zize:180px;
+}
+
+.rotate-main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+}
+    .planets-container-1{
+        height: 50%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
+    }
+    .planets-container-2{
+        height: 50%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
+    }
+    .planet{
+        margin: auto;
+        width: var(--planet-zize);
+        height: var(--planet-zize);
+        border-radius: 50%;
+        background-size: cover;
+        box-shadow: 20px 20px 50px 2px #000 inset, 0 0 20px 2px #000 ;
+        animation: spin 30s linear alternate infinite ;
+    }
+    .earth{
+        background-image:url(https://1.bp.blogspot.com/-UUXaK5GCj-k/UcsKJRMgkVI/AAAAAAAACfM/sePP_H08JTQ/s640/1.jpg);
+    }
+
+    .mercury{
+        background-image:url(https://i.redd.it/if9jwzh9kq061.jpg);
+    }
+    .venus{
+        background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Cylindrical_Map_of_Venus.jpg/1200px-Cylindrical_Map_of_Venus.jpg?20150824100848);
+    }
+    .moon{
+        background-image:url(https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_poles_1k.jpg);
+    }
+    .mars{
+        background-image:url(https://astrogeology.usgs.gov/cache/images/280c5b981329929d515bcda9bdc70ecd_Mars_Viking_ClrMosaic_global_1024.jpg);
+    }
+    .jupiter{
+        background-image:url(https://solarsystem.nasa.gov/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSXBOMlkwTm1KbU4ySXRZVFpqTUMwMFpHTmhMVGt4Wm1JdFptWmhNemRqWldaalpURmhCam9HUlZRNkVHUnBjM0J2YzJsMGFXOXVTU0pEYVc1c2FXNWxPeUJtYVd4bGJtRnRaVDBpVUVsQk1EYzNPREl1YW5Cbklqc2dabWxzWlc1aGJXVXFQVlZVUmkwNEp5ZFFTVUV3TnpjNE1pNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9rZXkifX0=--ad7b8d7dd145a3b35d687934405fdf247a60f91a/PIA07782.jpg);
+
+    }
+    .saturn{
+        background-image:url(https://bjj.mmedia.is/data/saturn/saturn.jpg);
+    }
+    .uranus{
+        background-image:url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1912b050-3675-4394-a3d1-d0b4cb43ae0a/dc3y4yc-387492ce-f09a-4372-b1a6-eed0d23c914e.png/v1/fill/w_1024,h_512,q_80,strp/universe_sandbox_2_uranus_map_by_magentameteorite_dc3y4yc-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTEyIiwicGF0aCI6IlwvZlwvMTkxMmIwNTAtMzY3NS00Mzk0LWEzZDEtZDBiNGNiNDNhZTBhXC9kYzN5NHljLTM4NzQ5MmNlLWYwOWEtNDM3Mi1iMWE2LWVlZDBkMjNjOTE0ZS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.SwvzgUk5BKXEqpCerHwz5TQgyXI6uBe370_1cbnHTN4);
+    }
+    .neptune{
+        background-image:url(https://supernova.eso.org/static/archives/exhibitionimages/screen/NEP0VTT1-CC-10x5k.jpg);
+    }
+    .pluto {
+        background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Pluto-map-sept-16-2015.jpg/1200px-Pluto-map-sept-16-2015.jpg?20150928163430);
+    }
+    @keyframes spin {
+            100%{
+                background-position: 100%;
+            }
+    }
+</style>
+<body>
+    <div class="rotate-main">
+
+        <div class="planets-container-1">
+            <div class="planet mercury"></div>
+            <div class="planet venus"></div>
+            <div class="planet earth"></div>
+            <div class="planet moon"></div>
+            <div class="planet mars"></div>
+
+        </div>
+        <div class="planets-container-2">
+            <div class="planet jupiter"></div>
+            <div class="planet saturn"></div>
+            <div class="planet uranus"></div>
+            <div class="planet neptune"></div>
+            <div class="planet pluto "></div>
+        </div>
+
+    </div>
+</body>
+</html>
